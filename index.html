@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <main class="app-container">
+
+        
+        <section id="start-container" class="card">
+            <h1>Tech Quiz</h1>
+            <p class="description">
+                Test your knowledge of technology, computers, HTML, CSS and JavaScript.
+            </p>
+
+            <div class="form-group">
+                <label for="question-count">How many questions do you want?</label>
+                <input
+                    type="number"
+                    id="question-count"
+                    min="1"
+                    max="30"
+                    value="10"
+                    required
+                >
+            </div>
+
+            <button id="start-quiz" class="primary-btn">
+                Start Quiz
+            </button>
+        </section>
+
+        
+        <section id="quiz-container" class="card hidden">
+            <h2>Tech Quiz</h2>
+
+            <p id="progress-text">Question 1 of 10</p>
+
+            <div class="progress-track">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+
+            <div id="question-box" class="question-box"></div>
+
+            <div class="navigation">
+                <button id="prev-btn" class="secondary-btn hidden">
+                    Previous
+                </button>
+
+                <button id="next-btn" class="primary-btn">
+                    Next
+                </button>
+
+                <button id="submit-btn" class="primary-btn hidden">
+                    Submit Quiz
+                </button>
+            </div>
+        </section>
+
+      
+        <section id="result-container" class="card hidden">
+            <h2>Quiz Completed!</h2>
+
+            <div id="results" class="results-content"></div>
+
+            <button id="retry-quiz" class="primary-btn">
+                Try Again
+            </button>
+        </section>
+
+    </main>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
